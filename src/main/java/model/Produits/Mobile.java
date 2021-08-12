@@ -1,5 +1,7 @@
 package model.Produits;
 
+import java.util.Arrays;
+
 public class Mobile extends OrdinateurEtMobile {
 
     private boolean support_cartes_memoire;
@@ -11,17 +13,34 @@ public class Mobile extends OrdinateurEtMobile {
     private boolean recharge_sans_fil;
 
     /*Definition de l enum  Type USB*/
-    private enum TypeConnecteurUSB{MicroUSB,TypeC,USB3};
+    public enum TypeConnecteurUSB{MicroUSB,TypeC,USB3};
     /*Defintion de la class Camera mobile*/
-    private class CameraMobile{
+    public static class CameraMobile{
 
         private int[] capteurs;
         private boolean flash;
         private boolean capteurEnFacade;
-        public CameraMobile(boolean flash,boolean capteurEnFacade,int...capteurs  ){
+        //Constructeur
+        public CameraMobile(boolean flash,
+                            boolean capteurEnFacade,
+                            int...resolutionDescCapateur){
             this.flash = flash;
             this.capteurEnFacade=capteurEnFacade;
-            this.capteurs = capteurs;
+            this.capteurs = resolutionDescCapateur;
+        }
+        //methode d'affichage
+
+        @Override
+        public String toString() {
+            return ('{' +
+                    "capteurs " + Arrays
+                                        .toString(capteurs)
+                                        .replace("{","(")
+                                        .replace(","," Méga pixel,")
+                                        .replace("}"," Méga pixel)") +
+                    ", Flash " + flash +
+                    ", Capteur en Facade " + capteurEnFacade +
+                    '}').replace("true","OUI").replace("false","-");
         }
     }
 
@@ -33,6 +52,10 @@ public class Mobile extends OrdinateurEtMobile {
                   int nmbDesArticlesEnStock,
                   int nmbDesArticlesReserves,
                   int nmbDesArticleVendu,
+                  double largeur,
+                  double hauteur,
+                  double epaisseur,
+                  double poids,
                   String systeme,
                   String processeur,
                   int nombre_de_coeurs,
@@ -44,14 +67,10 @@ public class Mobile extends OrdinateurEtMobile {
                   int capacite_du_stockahge,
                   boolean double_SIM,
                   Ecran ecran,
+                  int capacite_de_la_batterie,
                   TypeConnecteurUSB typeUSB,
                   CameraMobile camera,
-                  double largeur,
-                  double hauteur,
-                  double epaisseur,
-                  double poids,
                   boolean batterie_amovible,
-                  int capacite_de_la_batterie,
                   boolean recharge_sans_fil) {
         super(discreption, marque, prix, nmbDesArticlesEnStock, nmbDesArticlesReserves, nmbDesArticleVendu, CategorieP.MOBILE
                 , largeur,  hauteur, epaisseur,poids,systeme,ecran,processeur,nombre_de_coeurs,ram,capacite_du_stockahge,
@@ -77,6 +96,6 @@ public class Mobile extends OrdinateurEtMobile {
                 ", camera " + camera +
                 ", batterie amovible " + batterie_amovible +
                 ", recharge sans fil " + recharge_sans_fil).replace("true","Oui")
-                .replace("false","-").replace("null","-").replace("0","-");
+                .replace("false","-").replace("null","-");
     }
 }

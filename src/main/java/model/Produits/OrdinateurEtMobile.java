@@ -35,7 +35,7 @@ public abstract class OrdinateurEtMobile extends Produit {
     @Override
     public String toString() {
         return super.toString() +
-                "système " + systeme +
+                ", système " + systeme +
                 ", écran " + ecran.toString() +
                 ", processeur " + processeur +
                 ", nombre_de_coeurs " + nombre_de_coeurs +
@@ -43,6 +43,6 @@ public abstract class OrdinateurEtMobile extends Produit {
                 ", ram " + ram +"GB"+
                 ", capacite_du_stockahge " + capacite_du_stockahge +"GB"+
                 ", carte_graphique " + carte_graphique +
-                ", capacite_du_batteri =" + capacite_du_batterie +"mAH";
+                ", capacite_du_batteri " + capacite_du_batterie +"mAH";
     }
 }

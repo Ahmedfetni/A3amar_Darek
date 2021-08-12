@@ -104,7 +104,7 @@ public class Ordinateur extends OrdinateurEtMobile {
     @Override
     public String toString() {
         return(super.toString() +
-                "port_HDMI " + port_HDMI +
+                ", port_HDMI " + port_HDMI +
                 ", port_Ethernet " + port_Ethernet +
                 ", ecran_tactile " + ecran_tactile +
                 ", smartCarte_reader " + smartCarte_reader +

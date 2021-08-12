@@ -7,7 +7,7 @@ public class Ecran {
     private Definition_d_ecrant definition;
     private String technologie;
     //la class défintion d'ecran
-    private enum Definition_d_ecrant{
+    public enum Definition_d_ecrant{
         SD("720x576 pixels"),HD("1280x720 pixels"),FULL_HD("1920x1080 pixels"),_2k("2560x1440 pixels / 2040x1440 pixels"),
         _4k("3840x2160 pixels / 4096x2160 pixels"),_8K("7680x4320 pixels");
         final public String definition;
