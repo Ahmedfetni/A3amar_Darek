@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="A3amr_Darek" />
+        <module name="A3amar_Darek" />
       </profile>
     </annotationProcessing>
   </component>
