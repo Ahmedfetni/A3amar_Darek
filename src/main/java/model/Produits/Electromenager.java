@@ -1,9 +1,10 @@
 package model.Produits;
 
-<<<<<<< HEAD
+
 public class Electromenager extends Produit {
-    private double alimentationElectrique ;
+    private double alimentationElectrique;
     private String classEnergitique;
+
     //Cinstructeur
     public Electromenager(String discreption,
                           String marque,
@@ -22,16 +23,14 @@ public class Electromenager extends Produit {
         this.alimentationElectrique = alimentationElectrique;
         this.classEnergitique = classEnergitique;
     }
+
     //la methode  toString
     @Override
     public String toString() {
         return (super.toString() +
-                ", Alimentation Electrique " + alimentationElectrique +"V"+
-                ", Class Energitique " + classEnergitique).replace("true","Oui")
-                .replace("false","-").replace("null","-").replace("0","-");
+                ", Alimentation Electrique " + alimentationElectrique + "V" +
+                ", Class Energitique " + classEnergitique).replace("true", "Oui")
+                .replace("false", "-").replace("null", "-");
 
     }
-=======
-public class Electromenager {
->>>>>>> origin/master
 }

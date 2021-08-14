@@ -33,11 +33,11 @@ public class Mobile extends OrdinateurEtMobile {
         @Override
         public String toString() {
             return ('{' +
-                    "capteurs " + Arrays
+                    "capteurs " + Arrays //to change the [ and add the Méga pixel to the array
                                         .toString(capteurs)
-                                        .replace("{","(")
+                                        .replace("[","(")
                                         .replace(","," Méga pixel,")
-                                        .replace("}"," Méga pixel)") +
+                                        .replace("]"," Méga pixel)") +
                     ", Flash " + flash +
                     ", Capteur en Facade " + capteurEnFacade +
                     '}').replace("true","OUI").replace("false","-");

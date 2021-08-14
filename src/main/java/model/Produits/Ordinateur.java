@@ -2,7 +2,6 @@ package model.Produits;
 
 public class Ordinateur extends OrdinateurEtMobile {
 
-
     private boolean port_HDMI;
     private boolean port_Ethernet;
     private boolean ecran_tactile;
@@ -18,11 +17,11 @@ public class Ordinateur extends OrdinateurEtMobile {
     private TypeOrdinateur typeOrdinateur;
 
     //declaration de enum typeOrdinateur
-    private enum TypeOrdinateur {
+    public enum TypeOrdinateur {
         Portable,Bureau;
     }
     //declaration de enum typeDisqueDur
-    private enum TypeDisqueDur{
+    public enum TypeDisqueDur{
         SSD,HDD
     }
 
@@ -68,17 +67,42 @@ public class Ordinateur extends OrdinateurEtMobile {
         this.definitionCapeurWebCam=0;
         this.ecran_tactile = false;
         this.lecteur_d_empreinte = false;
+
     }
 
     //constructeur d'un ordinateur portable
 
-    public Ordinateur(String discreption, String marque, double prix, int nmbDesArticlesEnStock, int nmbDesArticlesReserves,
-                      int nmbDesArticleVendu, double largeur, double hauteur, double epaisseur,double poids,
-                      String systeme, Ecran ecran, String processeur, int nombre_de_coeurs, int ram, int capacite_du_stockahge,
-                      double frequence_processeur, String carte_graphique, int capacite_du_batterie, int definitionCapeurWebCam,
-                      boolean port_HDMI, boolean port_Ethernet, boolean ecran_tactile, boolean smartCarte_reader,
-                      boolean memoireVive_extensible, boolean memoireDisque_extensible, boolean lecteur_DVD, TypeDisqueDur typeDisqueDur,
-                      boolean lecteur_d_empreinte, int nombrePortUSB, String carte_mere) {
+    public Ordinateur(String discreption,
+                      String marque,
+                      double prix,
+                      int nmbDesArticlesEnStock,
+                      int nmbDesArticlesReserves,
+                      int nmbDesArticleVendu,
+                      double largeur,
+                      double hauteur,
+                      double epaisseur,
+                      double poids,
+                      String systeme,
+                      String processeur,
+                      int nombre_de_coeurs,
+                      int ram,
+                      int capacite_du_stockahge,
+                      double frequence_processeur,
+                      String carte_graphique,
+                      Ecran ecran,
+                      int capacite_du_batterie,
+                      int definitionCapeurWebCam,
+                      boolean ecran_tactile,
+                      boolean lecteur_d_empreinte,
+                      boolean port_HDMI,
+                      boolean port_Ethernet,
+                      boolean smartCarte_reader,
+                      boolean memoireVive_extensible,
+                      boolean memoireDisque_extensible,
+                      boolean lecteur_DVD,
+                      TypeDisqueDur typeDisqueDur,
+                      int nombrePortUSB,
+                      String carte_mere) {
 
         super(discreption, marque, prix, nmbDesArticlesEnStock, nmbDesArticlesReserves, nmbDesArticleVendu,  CategorieP.INFORMATIQUE, largeur,
                 hauteur, epaisseur,poids, systeme, ecran, processeur, nombre_de_coeurs, ram, capacite_du_stockahge, frequence_processeur,
@@ -117,7 +141,7 @@ public class Ordinateur extends OrdinateurEtMobile {
                 ", nombrePortUSB " + nombrePortUSB +
                 ", carte_mere " + carte_mere  +
                 ", typeOrdinateur " + typeOrdinateur.name()).replace("true","Oui")
-                .replace("false","-").replace("null","-").replace("0","-");
+                .replace("false","-").replace("null","-");
         /*On remplace le mot anglais true par oui
            et le 0 ,nullet le false par cette tiret '-' */
     }

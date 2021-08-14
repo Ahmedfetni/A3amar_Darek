@@ -36,7 +36,7 @@ public abstract class OrdinateurEtMobile extends Produit {
     public String toString() {
         return super.toString() +
                 ", système " + systeme +
-                ", écran " + ecran.toString() +
+                ", écran " + ecran +
                 ", processeur " + processeur +
                 ", nombre_de_coeurs " + nombre_de_coeurs +
                 ", frequence_processeur " + frequence_processeur +"GHz"+

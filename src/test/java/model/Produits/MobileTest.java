@@ -1,11 +1,12 @@
 package model.Produits;
 
-import org.junit.Assert;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions;
+
+
 
 class MobileTest {
-    /*Tester la method toString*/
+    /*Tester la methode toString*/
     @org.junit.jupiter.api.Test
     void testToString() {
         Ecran ecranMobile =new Ecran(5.5,Ecran.Definition_d_ecrant.FULL_HD,"LCD");
@@ -42,7 +43,7 @@ class MobileTest {
                 ", Discreption " + "descreption1"+
                 ", Prix "+111.1+"DA"+
                 ", système " + "System1" +
-                ", écran " + ecranMobile.toString() +
+                ", écran " + ecranMobile+
                 ", processeur " + "processeur1"+
                 ", nombre_de_coeurs " + 4 +
                 ", frequence_processeur " + 4.5 +"GHz"+
@@ -58,8 +59,9 @@ class MobileTest {
                 ", batterie amovible " +"Oui" +
                 ", recharge sans fil " + "-"
                 ;
-        System.out.println(mobile);
-        Assert.assertEquals(expected,mobile.toString());
+        // to debug System.out.println(mobile);
+        //Assert.assertEquals(expected,mobile.toString());
+        Assertions.assertEquals(expected,mobile.toString());
 
 
     }
