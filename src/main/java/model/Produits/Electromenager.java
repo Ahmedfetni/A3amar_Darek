@@ -1,5 +1,6 @@
 package model.Produits;
 
+<<<<<<< HEAD
 public class Electromenager extends Produit {
     private double alimentationElectrique ;
     private String classEnergitique;
@@ -30,4 +31,7 @@ public class Electromenager extends Produit {
                 .replace("false","-").replace("null","-").replace("0","-");
 
     }
+=======
+public class Electromenager {
+>>>>>>> origin/master
 }
